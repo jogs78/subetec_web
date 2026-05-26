@@ -47,6 +47,17 @@ class PoblarBaseDatos extends Command
                 $this->info('¡Tabla de viajes poblada con éxito con las rutas de Chiapas!'); // <-- CORREGIDO: Usamos info en lugar de success
                 break;
 
+            case 'anuncios':
+                $this->info('Iniciando el poblado de la tabla: anuncios...');
+                
+                Artisan::call('db:seed', [
+                    '--class' => 'AnuncioSeeder'
+                ]);
+                
+                $this->info(Artisan::output());
+                $this->info('¡Tabla de anuncios poblada con éxito!'); // <-- CORREGIDO: Usamos info en lugar de success
+                break;
+
             default:
                 $this->error("El argumento '$tipo' no es válido.");
                 $this->line("Por favor usa: 'php artisan poblar usuarios' o 'php artisan poblar viajes'");

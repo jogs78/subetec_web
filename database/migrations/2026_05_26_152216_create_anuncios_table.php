@@ -1,0 +1,34 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('anuncios', function (Blueprint $table) {
+            $table->id();
+            $table->string('imagen');
+            $table->string('titulo');
+            $table->string('descripcion');
+            $table->string('oferta');
+            $table->float('precio');
+            $table->enum('categoria',["Comida", "Hospedaje","Copias"]);
+            $table->timestamps();
+        });
+
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('anuncios');
+    }
+};
