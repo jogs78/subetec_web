@@ -37,7 +37,7 @@ class ViajeSeeder extends Seeder
                 'conductor' => 2,
                 'marca' => 'Volkswagen', 'modelo' => 'Vento', 'color' => 'Blanco', 'placas' => 'DRK-234-A',
                 'asientos_disponibles' => 3,
-                'origen' => 'Tuxtla Gutiérrez (ITTG Campus I)', 'destino' => 'San Cristóbal de Las Casas',
+                'origen' => 'Tuxtla Gutiérrez (Centro)', 'destino' => 'San Cristóbal de Las Casas',
                 'salida' => Carbon::parse("$fechaBase 16:00:00"),
                 'llegada' => Carbon::parse("$fechaBase 17:15:00"),
             ],
@@ -55,7 +55,7 @@ class ViajeSeeder extends Seeder
                 'conductor' => 1, // Jorge Octavio viaja local
                 'marca' => 'Chevrolet', 'modelo' => 'Aveo', 'color' => 'Gris Plata', 'placas' => 'DLN-452-C',
                 'asientos_disponibles' => 3,
-                'origen' => 'Tuxtla Gutiérrez (ITTG Campus I)', 'destino' => 'Chiapa de Corzo',
+                'origen' => 'Tuxtla Gutiérrez (ITTG Campus I)', 'destino' => 'Chiapa de Corzo, centro',
                 'salida' => Carbon::parse("$fechaBase 18:30:00"),
                 'llegada' => Carbon::parse("$fechaBase 19:00:00"),
             ],

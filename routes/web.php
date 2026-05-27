@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ViajeMonitoreoController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Cambiamos el view('welcome') por el controlador
+Route::get('/', [ViajeMonitoreoController::class, 'index']);
+
+// Ruta para la validación por Axios
+Route::post('/viajes/monitoreo/verificar', [ViajeMonitoreoController::class, 'verificarAcceso']);
